@@ -58,6 +58,14 @@ describe('App', () => {
     )
   })
 
+  it('renders a welcome heading', () => {
+    render(<App />)
+
+    expect(
+      screen.getByRole('heading', { name: /welcome/i }),
+    ).toBeInTheDocument()
+  })
+
   it('renders community links', () => {
     render(<App />)
 
